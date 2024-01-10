@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<table style="border-collapse: collapse">
+    <tr>
+        <td style="border: 1px solid gray; padding: 5px">id</td>
+        <td style="border: 1px solid gray; padding: 5px">name</td>
+        <td style="border: 1px solid gray; padding: 5px">email</td>
+    </tr>
+{% for user in users %}
+    <tr>
+        <td style="border: 1px solid gray; padding: 5px">{{ user.id }}</td>
+        <td style="border: 1px solid gray; padding: 5px">{{ user.name }}</td>
+        <td style="border: 1px solid gray; padding: 5px">{{ user.email }}</td>
+    </tr>
+{% endfor %}
+</table>
+<a href="/new_user/">Create user</a>
+</body>
+</html>
